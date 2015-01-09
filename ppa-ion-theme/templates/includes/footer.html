@@ -1,0 +1,45 @@
+<!-- Footer -->
+<footer id="footer">
+	<div class="container">
+		<div class="row double">
+			<div class="6u">
+				<div class="row collapse-at-2">
+					<div class="6u">
+						<h3>Links</h3>
+						<ul class="alt">
+                                               {% for title, link in LINKS %}
+                                                <li><a href="{{ link }}">{{ title }}</a></li>
+                                               {% endfor %}
+					       </ul>
+					</div>
+					<div class="6u">
+						<h3>Categories</h3>
+						<ul class="alt">
+                                                {% for category, articles in categories %}
+							<li><a href="{{ SITE_URL }}/category/{{ category.slug }}">{{ category }}</a> <span class="icon">{{ articles|count }}</span></li>
+
+                                                    {% endfor %}
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="6u">
+				<h2>Pikes Peak Aikikai</h2>
+                                <p>We want to share with you the lifelong practice that is Aikido.</p> 
+				<ul class="icons">
+					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<ul class="copyright">
+			<li>&copy; Untitled. All rights reserved.</li>
+			<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+			<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+		</ul>
+	</div>
+</footer>
+

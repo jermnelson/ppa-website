@@ -1,0 +1,29 @@
+{% extends 'left-sidebar.html' %}
+
+{% block page_header %}
+<header class="major">
+	<h2>{{ page.title }}</h2>
+        <p>{{ page.summary }}</p>
+        {% if page.background %}{{ page.background }}{% endif %}
+</header>
+{% endblock %}
+
+{% block left_column %}
+<div class="4u">
+        {% include "includes/email-form.html" %}
+	<hr />
+</div>
+{% endblock %}
+
+{% block center_column %}
+<div class="8u skel-cell-important">
+	<section>
+         {{ page.content }}
+	</section>
+</div>
+{% endblock %}
+
+{% block major %}
+{% endblock %}
+
+

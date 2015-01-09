@@ -1,0 +1,23 @@
+<!-- Header -->
+<header id="header" class="skel-layers-fixed">
+	<h1><a href="{{ SITEURL }}/"> {% if not HIDE_SITENAME %}{{ SITENAME }}{% endif %}</a></h1>
+	<nav id="nav">
+		<ul>
+                {% if DISPLAY_PAGES_ON_MENU %}
+                    {% for p in PAGES %}
+                         <li{% if p == page %} class="active"{% endif %}>
+                             <a href="{{ SITEURL }}/{{ p.url }}">{{ p.menulabel|default(p.title) }}</a>
+                         </li>
+                      {% endfor %}
+                {% endif %}
+                {% if DISPLAY_CATEGORIES_ON_MENU %}
+                    {% for cat, null in categories %}
+                        <li {% if cat == category %}class="active"{% endif %}>
+                            <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat | capitalize }}</a>
+                        </li>
+                    {% endfor %}
+                {% endif %}
+                        <li><a href="#" class="button special">Sign Up</a></li>
+		</ul>
+	</nav>
+</header>
