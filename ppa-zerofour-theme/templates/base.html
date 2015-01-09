@@ -1,0 +1,255 @@
+<!DOCTYPE HTML>
+<!--
+	ZeroFour by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock %}">
+	<head>
+		<title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="{{ SITEURL }}/theme/js/jquery.min.js"></script>
+		<script src="{{ SITEURL }}/theme/js/jquery.dropotron.min.js"></script>
+		<script src="{{ SITEURL }}/theme/js/skel.min.js"></script>
+		<script src="{{ SITEURL }}/theme/js/skel-layers.min.js"></script>
+		<script src="{{ SITEURL }}/theme/js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="{{ SITEURL }}/theme/css/skel.css" />
+			<link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css" />
+			<link rel="stylesheet" href="{{ SITEURL }}/theme/css/style-desktop.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="{{ SITEURL }}/theme/css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="{{ SITEURL }}/theme/css/ie/v9.css" /><![endif]-->
+	</head>
+	<body class="homepage">
+                {% block header %}
+		<!-- Header -->
+		<div id="header-wrapper">
+			<div class="container">
+			{% include 'includes/header.html' %}
+                        {% include 'includes/banner.html' %}
+			</div>
+                </div>
+		{% endblock %} 
+                {% block main %}
+		<!-- Main Wrapper -->
+			<div id="main-wrapper">
+				<div class="wrapper style1">
+					<div class="inner">
+				
+						<!-- Feature 1 -->
+							<section class="container box feature1">
+								<div class="row">
+									<div class="12u">
+										<header class="first major">
+											<h2>TRAINING THE MIND, BODY, AND SPIRIT</h2>
+											<p>
+                                                                                        Aikido is Japanese modern martial art of personal refinement
+                                                                                        where technique is not an objective but a tool for mental, 
+											physical, and spiritual growth.
+                                                                                        </p>
+										</header>
+									</div>
+								</div>
+								<div class="row">
+									<div class="4u">
+										<section>
+											<a href="#" class="image featured"><img src="http://upload.wikimedia.org/wikipedia/commons/2/28/Aikido.svg" height="266" alt="" /></a>
+											<header class="second icon fa-user">
+												<h3>About Aikido</h3>
+												<p>And a subtitle</p>
+											</header>
+										</section>
+									</div>
+									<div class="4u">
+										<section>
+											<a href="#" class="image featured"><img src="{{ SITEURL }}/theme/images/saotome-sensei-beach.png" alt="" /></a>
+											<header class="second icon fa-cog">
+												<h3>Upcoming Classes &amp; Events</h3>
+												<p>Classes and Events at Pikes Peak Aikikai</p>
+											</header>
+										</section>
+									</div>
+									<div class="4u">
+										<section>
+											<a href="#" class="image featured"><img src="{{ SITEURL }}/theme/images/dojo-map.png" alt="" /></a>
+											<header class="second icon fa-bar-chart-o">
+												<h3>Vistior's Welcome!</h3>
+                                                                                                <p>We are located at:</p>
+												<p><strong>3425 Van Teylingen Drive<br>
+												Colorado Springs, CO 80917
+                                                                                                </strong></p>
+											</header>
+										</section>
+									</div>
+								</div>
+								<div class="row">
+									<div class="12u">
+										<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus. Praesent semper 
+										bibendum ipsum, et tristique augue fringilla eu. Vivamus id risus vel dolor auctor euismod 
+										quis eget mi. Etiam eu ante risus. Aliquam erat volutpat. Aliquam luctus mattis lectus sit 
+										amet pulvinar. Nam nec turpis.</p>
+									</div>
+								</div>
+							</section>
+
+					</div>
+				</div>
+				<div class="wrapper style2">
+					<div class="inner">
+				
+						<!-- Feature 2 -->
+							<section class="container box feature2">
+								<div class="row">
+									<div class="6u">
+										<section>
+											<header class="major">
+												<h2>And this is a subheading</h2>
+												<p>It’s important but clearly not *that* important</p>
+											</header>
+											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus. 
+											Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat. 
+											Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi 
+											consequat etiam.</p>
+											<footer>
+												<a href="#" class="button medium icon fa-arrow-circle-right">Let's do this</a>
+											</footer>
+										</section>
+									</div>
+									<div class="6u">
+										<section>
+											<header class="major">
+												<h2>This is also a subheading</h2>
+												<p>And is as unimportant as the other one</p>
+											</header>
+											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus. 
+											Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat. 
+											Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi 
+											consequat etiam.</p>
+											<footer>
+												<a href="#" class="button medium alt icon fa-info-circle">Wait, what?</a>
+											</footer>
+										</section>
+									</div>
+								</div>
+							</section>
+
+						</div>
+				</div>
+                	{% include 'includes/posts.html' %}
+                {% endblock %}
+		<!-- Footer Wrapper -->
+			<div id="footer-wrapper">
+				<footer id="footer" class="container">
+					<div class="row">
+						<div class="3u">
+						
+							<!-- Links -->
+								<section>
+									<h2>Filler Links</h2>
+									<ul class="divided">
+										<li><a href="#">Quam turpis feugiat dolor</a></li>
+										<li><a href="#">Amet ornare in hendrerit </a></li>
+										<li><a href="#">Semper mod quisturpis nisi</a></li>
+										<li><a href="#">Consequat etiam phasellus</a></li>
+										<li><a href="#">Amet turpis, feugiat et</a></li>
+										<li><a href="#">Ornare hendrerit lectus</a></li>
+										<li><a href="#">Semper mod quis et dolore</a></li>
+										<li><a href="#">Amet ornare in hendrerit</a></li>
+										<li><a href="#">Consequat lorem phasellus</a></li>
+										<li><a href="#">Amet turpis, feugiat amet</a></li>
+										<li><a href="#">Semper mod quisturpis</a></li>
+									</ul>
+								</section>
+						
+						</div>
+						<div class="3u">
+						
+							<!-- Links -->
+								<section>
+									<h2>More Filler</h2>
+									<ul class="divided">
+										<li><a href="#">Quam turpis feugiat dolor</a></li>
+										<li><a href="#">Amet ornare in in lectus</a></li>
+										<li><a href="#">Semper mod sed tempus nisi</a></li>
+										<li><a href="#">Consequat etiam phasellus</a></li>
+									</ul>
+								</section>
+						
+							<!-- Links -->
+								<section>
+									<h2>Even More Filler</h2>
+									<ul class="divided">
+										<li><a href="#">Quam turpis feugiat dolor</a></li>
+										<li><a href="#">Amet ornare hendrerit lectus</a></li>
+										<li><a href="#">Semper quisturpis nisi</a></li>
+										<li><a href="#">Consequat lorem phasellus</a></li>
+									</ul>
+								</section>
+						
+						</div>
+						<div class="6u">
+						
+							<!-- About -->
+								<section>
+									<h2><strong>ZeroFour</strong> by HTML5 UP</h2>
+									<p>Hi! This is <strong>ZeroFour</strong>, a free, fully responsive HTML5 site
+									template by <a href="http://n33.co/">AJ</a> for <a href="http://html5up.net/">HTML5 UP</a>.
+									It's <a href="http://html5up.net/license/">Creative Commons Attribution</a>
+									licensed so use it for any personal or commercial project (just credit us
+									for the design!).</p>
+									<a href="#" class="button alt icon fa-arrow-circle-right">Learn More</a>
+								</section>
+						
+							<!-- Contact -->
+								<section>
+									<h2>Get in touch</h2>
+									<div>
+										<div class="row">
+											<div class="6u">
+												<dl class="contact">
+													<dt>Twitter</dt>
+													<dd><a href="#">@untitled-corp</a></dd>
+													<dt>Facebook</dt>
+													<dd><a href="#">facebook.com/untitled</a></dd>
+													<dt>WWW</dt>
+													<dd><a href="#">untitled.tld</a></dd>
+													<dt>Email</dt>
+													<dd><a href="#">user@untitled.tld</a></dd>
+												</dl>
+											</div>
+											<div class="6u">
+												<dl class="contact">
+													<dt>Address</dt>
+													<dd>
+														1234 Fictional Rd<br />
+														Nashville, TN 00000-0000<br />
+														USA
+													</dd>
+													<dt>Phone</dt>
+													<dd>(000) 000-0000</dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+								</section>
+						
+						</div>
+					</div>
+					<div class="row">
+						<div class="12u">
+							<div id="copyright">
+								<ul class="menu">
+									<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+
+	</body>
+</html>
