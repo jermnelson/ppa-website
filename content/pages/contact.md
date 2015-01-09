@@ -1,17 +1,18 @@
 Title: Contact Us
+Summary: How to contact Pikes Peak Aikido
 
 For further information, please contact us at:
 
-Phone:
+## Phone:
 (719) 574-7420
 
 We check our messages everyday so please feel free to leave a 
 voicemail if you are unable to reach anyone and we will get back to you.
 
-Email:
+## Email:
 <pikespeakaikido@gmail.com>
 
-Mail:
+## Mail:
 Pikes Peak Aikido
 3425 Van Teylingen Drive
 Colorado Springs, CO 80917

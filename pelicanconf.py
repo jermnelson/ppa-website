@@ -33,7 +33,8 @@ SOCIAL = (('Facebook', '#'),
 
 DEFAULT_PAGINATION = 10
 
-THEME = 'ppa-theme'
+#THEME = 'ppa-ion-theme'
+THEME = 'ppa-zerofour-theme'
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True

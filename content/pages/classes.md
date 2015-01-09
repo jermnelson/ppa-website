@@ -1,5 +1,6 @@
 Title: Classes
-Category: events
+Summary: Training opportunities at Pikes Peak Aikido
+Category: Events
 Tags: Aikido 
 
 ## Training Schedule
