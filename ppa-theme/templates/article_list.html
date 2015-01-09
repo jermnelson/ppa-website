@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+     <div class="well">
+     <h1>Welcome to Pikes Peak Aikido</h1>
+     <img src="/images/ppa-logo.jpg" class="img pull-left">
+     <p>
+     Aikido is a Japanese martial discipline for training the mind, body and spirit. 
+     It is an art of personal refinement where technique is not an objective but a 
+     tool of mental, physical, and spiritual growth. At the core philosophy of 
+     Aikido are two fundamental threads: a commitment to peaceful conflict resolution 
+     whenever possible and a commitment to self-improvement through practice. Pikes 
+    Peak Aikikai has been a part of the Colorado Springs martial arts scene for over 
+    25 years. We are a non-profit dojo run cooperatively by the dojo members. Pikes 
+    Peak Aikikai is a member of the Aikido Schools of Ueshiba, an international 
+    federation of of more than 70 dojos. 
+   </p>
+    </div>
+    {% if articles %}
+        {% for article in (articles_page.object_list if articles_page else articles) %}
+            <article class="well well-sm">
+                <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+                {% if DISPLAY_ARTICLE_INFO_ON_INDEX %}
+                    <div class="well well-sm">
+                        {% include "includes/article_info.html" %}
+                    </div>
+                {% endif %}
+                <div class="summary">{{ article.summary }}
+                    {% include 'includes/comment_count.html' %}
+                    <a class="btn btn-default btn-xs" href="{{ SITEURL }}/{{ article.url }}">more ...</a>
+                </div>
+            </article>
+            <hr/>
+        {% endfor %}
+    {% endif %}
+
+    {% include 'includes/pagination.html' %}
+{% endblock content %}
