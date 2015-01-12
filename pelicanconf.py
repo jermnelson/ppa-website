@@ -12,6 +12,8 @@ TIMEZONE = 'America/Denver'
 
 DEFAULT_LANG = 'en'
 
+SHOW_ARTICLE_AUTHOR = True
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
@@ -33,7 +35,8 @@ SOCIAL = (('Facebook', '#'),
 
 DEFAULT_PAGINATION = 10
 
-#THEME = 'ppa-ion-theme'
+# THEME = 'ppa-ion-theme'
+# THEME = 'ppa-theme'
 THEME = 'ppa-zerofour-theme'
 
 # Uncomment following line if you want document-relative URLs when developing
