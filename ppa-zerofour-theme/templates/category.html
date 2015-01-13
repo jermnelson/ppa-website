@@ -1,1 +1,44 @@
 {% extends 'base.html' %}
+
+{% block header %}
+<div id="header-wrapper">
+	<div class="container">
+	{% include 'includes/header.html' %}
+	</div>
+</div>
+{% endblock %} 
+
+{% block main %}
+<div class="wrapper style3">
+	<div class="inner">
+		<div class="container">
+			<div class="row">
+				<div class="8u">
+					<section class="box article-list">
+						<h2 class="icon fa-file-text-o">Recent {{ category }} Articles</h2>
+					        {% if articles %}
+					        {% for article in (articles_page.object_list if articles_page else articles) %}	
+							<article class="box excerpt">
+								{% if article.featured_image %}
+								<a href="#" class="image left"><img src="{{ SITEURL }}/{{ article.featured_image}} " alt="" /></a>
+								{% endif %}
+								<div>
+									<header>
+										<span class="date">{{ article.date.isoformat() }}</span>
+										<h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+										{% if article.author %}
+										by <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
+										{% endif %}
+									</header>
+									<p>{{ article.summary }}</p>
+								</div>
+							</article>
+						{% endfor %}
+                                                {% endif %}
+                                         </section>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	
+{% endblock %}
