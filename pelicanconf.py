@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Jeremy Nelson'
 SITENAME = 'Pikes Peak Aikido'
-SITEURL = ''
+SITEURL = 'https://www.googledrive.com/host/0B-8QrT1VCyEkfjM4N1hFemV0OURfajlWR1ZTZURVV21VUTFSV1pKM3RTWHVoZkRyYXZtams'
 
 PATH = 'content'
 
@@ -36,7 +36,7 @@ SOCIAL = (('Facebook', '#'),
 DEFAULT_PAGINATION = 10
 
 # THEME = 'ppa-ion-theme'
-# THEME = 'ppa-theme'
+#THEME = 'ppa-theme'
 THEME = 'ppa-zerofour-theme'
 
 # Uncomment following line if you want document-relative URLs when developing
