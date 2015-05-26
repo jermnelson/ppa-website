@@ -4,7 +4,18 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Jeremy Nelson'
 SITENAME = 'Pikes Peak Aikido'
-SITEURL = 'https://www.googledrive.com/host/0B-8QrT1VCyEkfjM4N1hFemV0OURfajlWR1ZTZURVV21VUTFSV1pKM3RTWHVoZkRyYXZtams'
+DEBUG = True
+BASE = {'theme': 'ppa-theme',
+        'gdocid': '0B-8QrT1VCyEkfmR4c2tEcWhvVHl0RlNFSzVJUzhIeFFUd2dDOTBKbTR4VlBmU2V4WWZHRW'}
+ION = {'theme': 'ppa-ion-theme',
+       'gdocid':'0B-8QrT1VCyEkfmQyTHZJMlMtcnRKM1o1a0FscHFEVU1yVXNsMTIxRU1XZXIxU1ZqSjhuSms'} 
+ZEROFOUR = {'theme': 'ppa-zerofour-theme',
+            'gdocid': '0B-8QrT1VCyEkfjM4N1hFemV0OURfajlWR1ZTZURVV21VUTFSV1pKM3RTWHVoZkRyYXZtams'}
+ACTIVE = ZEROFOUR
+if DEBUG:
+    SITEURL = ''
+else:
+    SITEURL = 'https://www.googledrive.com/host/{}'.format(ACTIVE.get('gdocid'))
 
 PATH = 'content'
 
@@ -35,9 +46,10 @@ SOCIAL = (('Facebook', '#'),
 
 DEFAULT_PAGINATION = 10
 
+THEME = ACTIVE.get('theme')
 # THEME = 'ppa-ion-theme'
 #THEME = 'ppa-theme'
-THEME = 'ppa-zerofour-theme'
+#THEME = 'ppa-zerofour-theme'
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True

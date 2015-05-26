@@ -9,7 +9,7 @@
 	skel.init({
 		reset: 'full',
 		breakpoints: {
-			'global':	{ range: '*', href: '/theme/css/style.css' },
+			'global':	{ range: '*', href: 'https://www.googledrive.com/host/0B-8QrT1VCyEkfjM4N1hFemV0OURfajlWR1ZTZURVV21VUTFSV1pKM3RTWHVoZkRyYXZtams/theme/css/style.css' },
 			'desktop':	{ range: '737-', href: '/theme/css/style-desktop.css', containers: 1200, grid: { gutters: 50 } },
 			'1000px':	{ range: '737-1200', href: '/theme/css/style-1000px.css', containers: 1000, grid: { gutters: 35 }, viewport: { width: 1080 } },
 			'mobile':	{ range: '-736', href: '/theme/css/style-mobile.css', containers: '100%!', grid: { collapse: true, gutters: 10 }, viewport: { scalable: false } }
