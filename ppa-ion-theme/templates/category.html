@@ -1,1 +1,37 @@
-{% extends 'base.html' %}
+{% extends 'left-sidebar.html' %}
+
+{% block page_header %}
+<header class="major">
+	<h2>{{ category }}</h2>
+        <p>{{ category.summary }}</p>
+</header>
+{% endblock %}
+
+{% block left_column %}{% endblock %}
+
+{% block center_column %}
+<div class="12u skel-cell-important">
+    {% if articles %}
+        {% for article in (articles_page.object_list if articles_page else articles) %}
+            <article class="well well-sm">
+                <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+                by {{ article.author }} on {{ article.date.strftime('%A %B %d, %Y at %I:%M %p') }}
+                {% if DISPLAY_ARTICLE_INFO_ON_INDEX %}
+                    <div class="well well-sm">
+                        {% include "includes/article_info.html" %}
+                    </div>
+                {% endif %}
+                <div class="summary">{{ article.summary }}
+                    {# include 'includes/comment_count.html' #}
+                    <a class="btn btn-default btn-xs" href="{{ SITEURL }}/{{ article.url }}">more ...</a>
+                </div>
+            </article>
+            <hr/>
+        {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block major %}
+{% endblock %}
+

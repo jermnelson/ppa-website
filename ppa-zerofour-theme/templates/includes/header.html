@@ -10,7 +10,7 @@
 				<ul>
 					<li {% if not PAGES and not CATEGORIES %}class="current_page_item"{% endif %}>
                                                 <a href="{{ SITEURL }}/index.html">Home</a></li>
-					<li>
+					{#<li>
 						<a href="">Dropdown</a>
 						<ul>
 							<li><a href="#">Lorem ipsum dolor</a></li>
@@ -26,7 +26,7 @@
 							</li>
 							<li><a href="#">Veroeros feugiat</a></li>
 						</ul>
-					</li>
+					</li>#}
 					{% if DISPLAY_PAGES_ON_MENU %}
 					{% for p in PAGES %}
 					<li {% if p== page %} class="current_page_item"{% endif %}>

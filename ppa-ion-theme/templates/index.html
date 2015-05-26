@@ -35,17 +35,32 @@
 					<i class="icon fa-refresh major"></i>
 					<h3>Upcoming Classes &amp; Events</h3>
 					<p>Upcoming classes and Events at Pikes Peak Aikikai</p>
-                                        {% for tag,articles in tags %}
-                                        {% if tag == 'Events' %}
-                                        <dl>
-					{% for article in articles %}	
- 						<dt><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a><dt>
-                                                <dd>{{ article.summary }}</dd>
-					{% endfor %}
-					</dl>
-                                        {% endif %} 
+                                         <h4>Classses</h4>
+                                         <dl>
+                                            <dt>TUESDAY</dt>
+                                            <dd>Open Class: 6:00* - 7:30 PM</dd>
+                                            <dt>THURSDAY</dt>
+                                            <dd>Tai Chi: 5:15-5:50 PM</dd>
+                                            <dd>Open Class: 6:00* - 7:30 PM</dd>
+                                            <dt>SATURDAY</dt>  
+                                            <dd>Youth and Fundamentals Class: 9:30 - 10:30 AM</dd>
+                                            <dd>Open Class: 10:30-12:00 PM</dd>
+                                         </dl>
+                                         {% for cat, articles in categories %}
+                                          {% if cat == 'Events' %}
+                                          <h4>{{ cat }}</h4>
+                                          <dl>
+                                          {% for article in articles %}
+                                             <dt>
+                                                <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+                                              <dt>
+                                              <dd>Posted on {{ article.date.strftime('%A %B %d, %Y at %I:%M %p') }}
+                                                  by {{ article.author }}
+                                              </dd>
+                                          {% endfor %} 
+                                          </dl>
+                                          {% endif %}
                                         {% endfor %}
-
 				</section>
 			</div>
 			<div class="4u">

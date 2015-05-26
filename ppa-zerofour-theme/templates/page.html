@@ -1,1 +1,30 @@
 {% extends 'base.html' %}
+
+{% block header %}
+<div id="header-wrapper">
+	<div class="container">
+	{% include 'includes/header.html' %}
+	</div>
+</div>
+{% endblock %} 
+
+
+{% block main %}
+<div class="wrapper style3">
+	<div class="inner">
+		<div class="container">
+			<div class="row">
+				<div class="8u">
+					<section class="box article-list">
+	<h2>{{ page.title }}</h2>
+        <p>{{ page.summary }}</p>
+        {% if page.background %}{{ page.background }}{% endif %}
+        <article class="box">
+        {{ page.content }}
+        </article>                     
+                                </div>
+                        </div>
+                </div>
+        </div>
+</div>
+{% endblock %}

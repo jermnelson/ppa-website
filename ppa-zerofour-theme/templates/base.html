@@ -52,6 +52,7 @@
 											physical, and spiritual growth.
                                                                                         </p>
 										</header>
+
 									</div>
 								</div>
 								<div class="row">
@@ -60,8 +61,21 @@
 											<a href="#" class="image featured"><img src="http://upload.wikimedia.org/wikipedia/commons/2/28/Aikido.svg" height="266" alt="" /></a>
 											<header class="second icon fa-user">
 												<h3>About Aikido</h3>
-												<p>And a subtitle</p>
+												<p>PPA Blog and News</p>
 											</header>
+                                       
+                                        {% for tag, rows in categories %}
+                                        {% if tag == 'Aikido' %}
+                                        <dl>
+					{% for article in rows %}	
+ 						<dt><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a><br>
+                                                    {{ article.date.strftime('%A %B %d, %Y at %I:%M %p') }}    
+                                                <dt>
+                                                <dd>{{ article.summary }}</dd>
+					{% endfor %}
+					</dl>
+                                        {% endif %} 
+                                        {% endfor %}
 										</section>
 									</div>
 									<div class="4u">
@@ -70,7 +84,24 @@
 											<header class="second icon fa-cog">
 												<h3>Upcoming Classes &amp; Events</h3>
 												<p>Classes and Events at Pikes Peak Aikikai</p>
+                                                
 											</header>
+                                         {% for cat, rows in categories %}
+                                          {% if cat == 'Events' %}
+                                          <h4>{{ cat }}</h4>
+                                          <dl>
+                                          {% for article in rows %}
+                                             <dt>
+                                                <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+                                              <dt>
+                                              <dd>Posted on {{ article.date.strftime('%A %B %d, %Y at %I:%M %p') }}<br>
+                                                  by {{ article.author }}
+                                              </dd>
+                                          {% endfor %} 
+                                          </dl>
+                                          {% endif %}
+                                         {% endfor %}
+
 										</section>
 									</div>
 									<div class="4u">

@@ -1,1 +1,41 @@
-{% extends 'base.html' %}
+{% extends 'left-sidebar.html' %}
+
+{% block page_header %}
+<header class="major">
+    <h3>{{ article.date.strftime('%A %B %d, %Y at %I:%M %p') }}</h3>
+{% if SHOW_ARTICLE_CATEGORY %}
+<span class="label label-default">Category</span>
+<a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+{% endif %}
+    <h2>
+	    <a href="{{ SITEURL }}/{{ article.url }}"
+	       rel="bookmark"
+	       title="Permalink to {{ article.title|striptags }}">
+		{{ article.title }}
+	    </a>
+    </h2>
+    <p>
+{% if article.author %}
+   <a href="{{ SITEURL }}/{{ article.author.url }}"><i class="fa fa-user"></i> {{ article.author }}</a>
+{% endif %}
+{% include 'includes/taglist.html' %}
+    </p>
+</header>
+{% endblock %}
+
+{% block left_column %}{% endblock %}
+
+{% block center_column %}
+<div class="12u skel-cell-important">
+<p>{{ article.summary }}</p>
+</div>
+{% endblock %}
+
+{% block major %}
+<hr class="major" />
+<div class="row">
+    <div class="8u">
+       {{ article.content }}
+    </div>
+</div>
+{% endblock %}

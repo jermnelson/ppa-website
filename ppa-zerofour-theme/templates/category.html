@@ -26,7 +26,7 @@
 									<header>
 										<span class="date">{{ article.date.isoformat() }}</span>
 										<h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
-										{% if article.author %}
+										{% if article.author and category != 'Instructors' %}{{ category }}
 										by <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
 										{% endif %}
 									</header>
