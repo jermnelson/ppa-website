@@ -37,6 +37,7 @@ LINKS = (('Aikido Schools of Ueshiba', 'http://asu.org/'),
          ('Boulder Aikikai', 'http://www.boulderaikikai.org/'),
          ('Castle Rock Aikido', 'http://www.craikido.com/'),
          ('Aikido for Veterans', '#'),
+         ('Eishen Ryu Kenjutsu', 'http://'),
          ('Kashiwa Bujinkan Ninjutsu', 'http://www.kbninjutsu.com/'))
 
 # Social widget
